@@ -24,3 +24,12 @@ jobs:
         personal_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./coffee-brands
         publish_branch: gh-pages
+
+    - name: Debug Git
+      run: |
+        echo "git config user.email: $(git config user.email)"
+        echo "git config user.name: $(git config user.name)"
+        echo "git remote -v: $(git remote -v)"
+        echo "git status: $(git status)"
+        echo "git log: $(git log -n5)"
+
